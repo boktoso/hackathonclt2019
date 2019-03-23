@@ -1,0 +1,380 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "honestBrokerToken",
+    "firstName",
+    "middleName",
+    "lastName",
+    "streetAddress",
+    "city",
+    "stateProvince",
+    "country",
+    "zipcode",
+    "dob",
+    "bloodType",
+    "diagnoses",
+    "visits"
+  ],
+  "properties": {
+    "honestBrokerToken": {
+      "$id": "#/properties/honestBrokerToken",
+      "type": "string",
+      "title": "The Honestbrokertoken Schema",
+      "default": "",
+      "examples": [
+        "aeh92784h6aidsgubyaewrtaT"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "firstName": {
+      "$id": "#/properties/firstName",
+      "type": "string",
+      "title": "The Firstname Schema",
+      "default": "",
+      "examples": [
+        "John"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "middleName": {
+      "$id": "#/properties/middleName",
+      "type": "string",
+      "title": "The Middlename Schema",
+      "default": "",
+      "examples": [
+        "Kennedy James"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "lastName": {
+      "$id": "#/properties/lastName",
+      "type": "string",
+      "title": "The Lastname Schema",
+      "default": "",
+      "examples": [
+        "Smith"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "streetAddress": {
+      "$id": "#/properties/streetAddress",
+      "type": "string",
+      "title": "The Streetaddress Schema",
+      "default": "",
+      "examples": [
+        "123 Main St"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "city": {
+      "$id": "#/properties/city",
+      "type": "string",
+      "title": "The City Schema",
+      "default": "",
+      "examples": [
+        "Default"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "stateProvince": {
+      "$id": "#/properties/stateProvince",
+      "type": "string",
+      "title": "The Stateprovince Schema",
+      "default": "",
+      "examples": [
+        "NA"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "country": {
+      "$id": "#/properties/country",
+      "type": "string",
+      "title": "The Country Schema",
+      "default": "",
+      "examples": [
+        "US"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "zipcode": {
+      "$id": "#/properties/zipcode",
+      "type": "string",
+      "title": "The Zipcode Schema",
+      "default": "",
+      "examples": [
+        "12345"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "dob": {
+      "$id": "#/properties/dob",
+      "type": "string",
+      "title": "The Dob Schema",
+      "default": "",
+      "examples": [
+        "2000-01-01"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "age": {
+      "$id": "#/properties/age",
+      "type": "integer",
+      "title": "The Age Schema",
+      "default": 0,
+      "examples": [
+        19
+      ]
+    },
+    "bloodType": {
+      "$id": "#/properties/bloodType",
+      "type": "string",
+      "title": "The Bloodtype Schema",
+      "default": "",
+      "examples": [
+        "O-"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "race": {
+      "$id": "#/properties/race",
+      "type": "string",
+      "title": "The Race Schema",
+      "default": "",
+      "examples": [
+        "alien"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "diagnoses": {
+      "$id": "#/properties/diagnoses",
+      "type": "object",
+      "title": "The Diagnoses Schema",
+      "required": [
+        "Diabetes1",
+        "Obesity"
+      ],
+      "properties": {
+        "Diabetes1": {
+          "$id": "#/properties/diagnoses/properties/Diabetes1",
+          "type": "object",
+          "title": "The Diabetes1 Schema",
+          "required": [
+            "diagnosed",
+            "dateDiagnosed"
+          ],
+          "properties": {
+            "diagnosed": {
+              "$id": "#/properties/diagnoses/properties/Diabetes1/properties/diagnosed",
+              "type": "boolean",
+              "title": "The Diagnosed Schema",
+              "default": false,
+              "examples": [
+                true
+              ]
+            },
+            "dateDiagnosed": {
+              "$id": "#/properties/diagnoses/properties/Diabetes1/properties/dateDiagnosed",
+              "type": "string",
+              "title": "The Datediagnosed Schema",
+              "default": "",
+              "examples": [
+                "2007-05-06"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "Obesity": {
+          "$id": "#/properties/diagnoses/properties/Obesity",
+          "type": "object",
+          "title": "The Obesity Schema",
+          "required": [
+            "diagnosed",
+            "dateDiagnosed"
+          ],
+          "properties": {
+            "diagnosed": {
+              "$id": "#/properties/diagnoses/properties/Obesity/properties/diagnosed",
+              "type": "boolean",
+              "title": "The Diagnosed Schema",
+              "default": false,
+              "examples": [
+                true
+              ]
+            },
+            "dateDiagnosed": {
+              "$id": "#/properties/diagnoses/properties/Obesity/properties/dateDiagnosed",
+              "type": "string",
+              "title": "The Datediagnosed Schema",
+              "default": "",
+              "examples": [
+                "2008-01-01"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    },
+    "visits": {
+      "$id": "#/properties/visits",
+      "type": "array",
+      "title": "The Visits Schema",
+      "items": {
+        "$id": "#/properties/visits/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "locationName",
+          "locationStreetAddress",
+          "locationCity",
+          "locationStateProvince",
+          "locationCountry",
+          "locationZipcode",
+          "professional",
+          "visitDate",
+          "diagnoses",
+          "treatments",
+          "miscellaneousNotes"
+        ],
+        "properties": {
+          "locationName": {
+            "$id": "#/properties/visits/items/properties/locationName",
+            "type": "string",
+            "title": "The Locationname Schema",
+            "default": "",
+            "examples": [
+              "Medical Center 123"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "locationStreetAddress": {
+            "$id": "#/properties/visits/items/properties/locationStreetAddress",
+            "type": "string",
+            "title": "The Locationstreetaddress Schema",
+            "default": "",
+            "examples": [
+              "123 Main St"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "locationCity": {
+            "$id": "#/properties/visits/items/properties/locationCity",
+            "type": "string",
+            "title": "The Locationcity Schema",
+            "default": "",
+            "examples": [
+              "Default"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "locationStateProvince": {
+            "$id": "#/properties/visits/items/properties/locationStateProvince",
+            "type": "string",
+            "title": "The Locationstateprovince Schema",
+            "default": "",
+            "examples": [
+              "NA"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "locationCountry": {
+            "$id": "#/properties/visits/items/properties/locationCountry",
+            "type": "string",
+            "title": "The Locationcountry Schema",
+            "default": "",
+            "examples": [
+              "US"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "locationZipcode": {
+            "$id": "#/properties/visits/items/properties/locationZipcode",
+            "type": "string",
+            "title": "The Locationzipcode Schema",
+            "default": "",
+            "examples": [
+              "12345"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "professional": {
+            "$id": "#/properties/visits/items/properties/professional",
+            "type": "string",
+            "title": "The Professional Schema",
+            "default": "",
+            "examples": [
+              "Dr. Schrödinger"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "visitDate": {
+            "$id": "#/properties/visits/items/properties/visitDate",
+            "type": "string",
+            "title": "The Visitdate Schema",
+            "default": "",
+            "examples": [
+              "2015-01-01 12:15:00"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "diagnoses": {
+            "$id": "#/properties/visits/items/properties/diagnoses",
+            "type": "object",
+            "title": "The Diagnoses Schema"
+          },
+          "treatments": {
+            "$id": "#/properties/visits/items/properties/treatments",
+            "type": "array",
+            "title": "The Treatments Schema",
+            "items": {
+              "$id": "#/properties/visits/items/properties/treatments/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "type",
+                "name"
+              ],
+              "properties": {
+                "type": {
+                  "$id": "#/properties/visits/items/properties/treatments/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "Perscription"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "name": {
+                  "$id": "#/properties/visits/items/properties/treatments/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "Oxicoton"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "miscellaneousNotes": {
+            "$id": "#/properties/visits/items/properties/miscellaneousNotes",
+            "type": "string",
+            "title": "The Miscellaneousnotes Schema",
+            "default": "",
+            "examples": [
+              "He came in with chest pain.  Gave XXX and left him with YYYY"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

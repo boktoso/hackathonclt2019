@@ -1,0 +1,58 @@
+{
+  "honestBrokerToken": "aeh92784h6aidsgubyaewrtaT",
+  "firstName": "John",
+  "middleName": "Kennedy James",
+  "lastName": "Smith",
+  "streetAddress": "123 Main St",
+  "city": "Default",
+  "stateProvince": "NA",
+  "country": "US",
+  "zipcode": "12345",
+  "dob": "2000-01-01",
+  "age": 19,
+  "bloodType": "O-",
+  "race": "alien",
+  "diagnoses": {
+    "Diabetes1": {
+      "diagnosed": true,
+      "dateDiagnosed": "2007-05-06"
+    },
+    "Obesity": {
+      "diagnosed": true,
+      "dateDiagnosed": "2008-01-01"
+    }
+  },
+  "visits": [
+    {
+      "locationName": "Medical Center 123",
+      "locationStreetAddress": "123 Main St",
+      "locationCity": "Default",
+      "locationStateProvince": "NA",
+      "locationCountry": "US",
+      "locationZipcode": "12345",
+      "professional": "Dr. Schrödinger",
+      "visitDate": "2015-01-01 12:15:00",
+      "diagnoses": {},
+      "treatments": [
+        {
+          "type": "Perscription",
+          "name": "Oxicoton"
+        }
+      ],
+      "miscellaneousNotes": "He came in with chest pain.  Gave XXX and left him with YYYY"
+    },
+    {
+      "locationName": "Medical Center 789",
+      "locationStreetAddress": "789 Main St",
+      "locationCity": "Default",
+      "locationStateProvince": "NA",
+      "locationCountry": "US",
+      "locationZipcode": "12345",
+      "professional": "Dr. Zoidberg",
+      "visitDate": "2015-10-25 16:45:00",
+      "diagnoses": {},
+      "treatments": [],
+      "miscellaneousNotes": "Medical Checkup"
+    }
+  ]
+}
